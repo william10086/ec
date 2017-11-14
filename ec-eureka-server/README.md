@@ -20,3 +20,19 @@ The net result of this is that all client apps that want to consume the Config S
 bootstrap.yml (or an environment variable) with the server address in `spring.cloud.config.uri` 
 (defaults to "http://localhost:8888") 
 
+
+
+# Registering with Eureka
+
+When a client registers with Eureka, it provides meta-data with itself such as host and port, 
+health indicator URL, home page etc. Eureka receives heartbeat messages from each instance 
+belonging to a service. If the heartbeat fails over a configurable timetable, the instance is 
+normally removed from the registry.
+
+# Status Page and Health Indicator
+
+The status page and health indicators for a Eureka instance default to "/info" and "/health" 
+respectively, which are the default locations of useful endpoints in a Spring Boot Actuator 
+application.  
+ 
+ 
