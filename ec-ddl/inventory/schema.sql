@@ -9,9 +9,9 @@ CREATE TABLE ec_inventory (
   count        INT(11) COMMENT '商品数量',
   market_price DECIMAL COMMENT '市场价格',
   sale_price   DECIMAL COMMENT '销售价格',
-  onsale_time  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+  on_sale_time  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
   COMMENT '上架时间',
-  offsale_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+  off_sale_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
   COMMENT '下架时间',
   pic          VARCHAR(255) COMMENT '商品图片',
   status       INTEGER COMMENT '商品状态',

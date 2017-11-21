@@ -1,8 +1,11 @@
 package com.ysz.ec.inventory.core.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -10,7 +13,8 @@ import java.util.Date;
  */
 @Data
 @Builder
-public class Inventory {
+@AllArgsConstructor
+public class Inventory implements Serializable {
 
   private Long id;
   // spuId
@@ -22,11 +26,11 @@ public class Inventory {
   // 商品描述
   private String description;
   // 商品数量
-  private Long count;
+  private Integer count;
   // 市场价格
-  private Double marketPrice;
+  private BigDecimal marketPrice;
   // 销售价格
-  private Double salePrice;
+  private BigDecimal salePrice;
   // 上架时间
   private Date onSaleTime;
   // 下架时间
@@ -38,4 +42,7 @@ public class Inventory {
 
   private Date gmtUpdate;
   private Date gmtCreate;
+
+  public Inventory() {
+  }
 }
