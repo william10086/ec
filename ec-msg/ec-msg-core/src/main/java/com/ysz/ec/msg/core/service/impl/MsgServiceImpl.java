@@ -37,7 +37,6 @@ public class MsgServiceImpl implements MsgService {
     if (msg == null) {
       throw new MsgBizException(MsgBizExceptionEnum.MSG_IS_NULL);
     }
-
   }
 
 

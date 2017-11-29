@@ -22,6 +22,11 @@ public interface MsgApi {
   @RequestMapping(value = "/prepare", method = RequestMethod.POST)
   ApiResp<Boolean> prepareConfirmMsg(@RequestBody PrepareConfirmMsgReq req);
 
+  /**
+   * 确认消息，并发送根据Id发送消息给消息中间件
+   * @param msgId
+   * @return
+   */
   @RequestMapping(value = "/confirm", method = RequestMethod.POST)
   ApiResp<Boolean> confirmAndSendMsg(@RequestParam(value = "msgId") String msgId);
 
