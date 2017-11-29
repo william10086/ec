@@ -1,10 +1,12 @@
 package com.ysz.ec.inventory;
 
 import com.ysz.ec.common.mybatis.dao.MyBatisDAO;
+import com.ysz.ec.inventory.adapter.client.UserClient;
+import com.ysz.ec.inventory.core.dao.CategoryDAO;
 import com.ysz.ec.inventory.core.dao.InventoryDAO;
 import com.ysz.ec.inventory.core.entity.Inventory;
+import com.ysz.ec.usr.api.dto.TestWithParamReq;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -31,16 +33,27 @@ public class InventoryApplicationTest {
   @Resource
   private InventoryDAO inventoryDAO;
 
+  @Resource
+  private CategoryDAO categoryDAO;
+
+  @Resource
+  private UserClient userApiAdapter;
+
   @Test
-  @Ignore
   public void shouldDataSourceNotNull() throws Exception {
-    System.err.println(myBatisDAO.getClass().getName());
+    System.err.println(userApiAdapter == null);
+    userApiAdapter.testWithParam(TestWithParamReq.builder()
+        .age(1)
+        .name("aaaa")
+        .date(new Date())
+        .build());
   }
+
 
   @Test
   public void shouldInsertSuccess() throws Exception {
     Inventory inventory =
-        new Inventory().builder()
+        Inventory.builder()
             .spuId(1L)
             .supplierId(1L)
             .name("商品名称")
@@ -55,4 +68,6 @@ public class InventoryApplicationTest {
             .build();
     inventoryDAO.addInventory(inventory);
   }
+
+
 }

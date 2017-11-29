@@ -1,5 +1,9 @@
 server:
   port: 8002
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8881/eureka/
 spring:
   application:
     name: EC-INVENTORY
@@ -12,4 +16,3 @@ spring:
     url: jdbc:mysql://localhost:3306/ec?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
     username: root
     password: 111111
-

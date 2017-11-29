@@ -10,8 +10,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ec-usr</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>ec-usr-api</module>
+        <module>ec-usr-core</module>
+    </modules>
 
     <dependencies>
+        <dependency>
+            <groupId>com.ysz</groupId>
+            <artifactId>ec-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
