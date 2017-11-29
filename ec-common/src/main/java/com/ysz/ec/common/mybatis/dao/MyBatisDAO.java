@@ -28,6 +28,18 @@ public class MyBatisDAO extends SqlSessionDaoSupport {
     }
   }
 
+  public <E> E selectOne(final String sqlMapId, final Object param) {
+    try {
+      Object result = execute(sqlSession -> sqlSession.selectOne(sqlMapId, param));
+      return (E) result;
+    } catch (Exception e) {
+      log.error(MessageFormatter.arrayFormat("failed to execute sql:{},param:{}",
+          new Object[]{sqlMapId, param}).getMessage(), e);
+      throw wrap(e);
+    }
+
+  }
+
   /**
    * 执行 MyBatis的回调
    */

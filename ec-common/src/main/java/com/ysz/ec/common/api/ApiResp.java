@@ -23,7 +23,7 @@ public class ApiResp<T> implements Serializable {
     return resp;
   }
 
-  public static <T> ApiResp ok(T data) {
+  public static <T> ApiResp<T> ok(T data) {
     ApiResp<T> resp = new ApiResp<>();
     resp.setData(data);
     resp.setStatus(ApiRespStatusEnum.OK.getVal());

@@ -1,10 +1,12 @@
 package com.ysz.ec.msg.api;
 
+import com.ysz.ec.common.api.ApiResp;
 import com.ysz.ec.msg.api.dto.PrepareConfirmMsgReq;
 
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -18,5 +20,9 @@ public interface MsgApi {
    * 预发送确认消息
    */
   @RequestMapping(value = "/prepare", method = RequestMethod.POST)
-  int prepareConfirmMsg(@RequestBody PrepareConfirmMsgReq req);
+  ApiResp<Boolean> prepareConfirmMsg(@RequestBody PrepareConfirmMsgReq req);
+
+  @RequestMapping(value = "/confirm", method = RequestMethod.POST)
+  ApiResp<Boolean> confirmAndSendMsg(@RequestParam(value = "msgId") String msgId);
+
 }
