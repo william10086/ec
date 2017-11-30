@@ -1,4 +1,4 @@
-package com.ysz.ec.inventory.configuration;
+package com.ysz.ec.msg.core.configuration;
 
 import com.ysz.ec.common.mybatis.dao.MyBatisDAO;
 import com.ysz.ec.common.utils.MyBatisUtils;
@@ -25,9 +25,10 @@ public class MyBatisConfiguration {
   @Bean
   public MyBatisDAO myBatisDAO() throws Exception {
     MyBatisDAO myBatisDAO = new MyBatisDAO();
-    myBatisDAO.setSqlSessionFactory(MyBatisUtils.createSqlSessionFactory(dataSource,
-        "com.ysz.ec.inventory.core.entity",
-        "classpath:mybatis/mapper/*/*.xml"));
+    myBatisDAO.setSqlSessionFactory(
+        MyBatisUtils.createSqlSessionFactory(dataSource,
+            "com.ysz.ec.msg.core.entity",
+            "classpath:mybatis/mapper/*/*.xml"));
     return myBatisDAO;
   }
 

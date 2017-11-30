@@ -1,2 +1,12 @@
-com/ysz/ec/msg/core/impl/MsgApiImpl.class
+com/ysz/ec/msg/core/manager/dto/SendResultDTO.class
+com/ysz/ec/msg/core/MsgApplication.class
+com/ysz/ec/msg/core/entity/Msg$MsgBuilder.class
+com/ysz/ec/msg/core/manager/dto/SendResultDTO$SendResultDTOBuilder.class
+com/ysz/ec/msg/core/entity/Msg.class
+com/ysz/ec/msg/core/configuration/KafkaConfiguration.class
+com/ysz/ec/msg/core/dao/impl/MsgDAOImpl.class
+com/ysz/ec/msg/core/web/MsgApiImpl.class
+com/ysz/ec/msg/core/service/impl/MsgServiceImpl.class
+com/ysz/ec/msg/core/service/MsgService.class
+com/ysz/ec/msg/core/dao/MsgDAO.class
 com/ysz/ec/msg/core/utils/MsgConvertUtils.class

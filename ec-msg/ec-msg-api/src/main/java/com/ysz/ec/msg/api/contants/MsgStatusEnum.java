@@ -5,6 +5,7 @@ package com.ysz.ec.msg.api.contants;
  */
 public enum MsgStatusEnum {
   PREPARE(0, "消息初始化"),
+  SENDING(1,"消息发送中"),
   DEAD(-1, "死亡队列");
   
   private int code;

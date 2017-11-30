@@ -30,4 +30,12 @@ public interface MsgApi {
   @RequestMapping(value = "/confirm", method = RequestMethod.POST)
   ApiResp<Boolean> confirmAndSendMsg(@RequestParam(value = "msgId") String msgId);
 
+
+  //未完成方法:
+  // (1) 消息进入死亡队列
+  // (2) 保存且直接发送消息
+  // (3) 直接发送消息
+  // (4) 按照 topic resend Msg
+  // (5) 按照 msgId resend Msg
+  // (6) ...
 }

@@ -7,4 +7,6 @@ public interface MsgDAO {
   void insert(Msg msg);
 
   Msg loadByMsgId(String msgId);
+
+  int updateStatus(Long id, int code);
 }

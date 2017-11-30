@@ -18,9 +18,20 @@ public class MyBatisDAO extends SqlSessionDaoSupport {
   public MyBatisDAO() {
   }
 
+
   public int insert(final String sqlMapId, final Object param) {
     try {
       return (Integer) execute(sqlSession -> sqlSession.insert(sqlMapId, param));
+    } catch (Exception e) {
+      log.error(MessageFormatter.arrayFormat("failed to execute sql:{},param:{}",
+          new Object[]{sqlMapId, param}).getMessage(), e);
+      throw wrap(e);
+    }
+  }
+
+  public int update(final String sqlMapId, final Object param) {
+    try {
+      return (Integer) execute(sqlSession -> sqlSession.update(sqlMapId, param));
     } catch (Exception e) {
       log.error(MessageFormatter.arrayFormat("failed to execute sql:{},param:{}",
           new Object[]{sqlMapId, param}).getMessage(), e);
@@ -54,6 +65,7 @@ public class MyBatisDAO extends SqlSessionDaoSupport {
       return new DaoException(e);
     }
   }
+
 
   public interface SqlSessionCallback {
     /**

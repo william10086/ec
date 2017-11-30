@@ -8,12 +8,20 @@ import com.ysz.ec.msg.api.contants.MsgBizExceptionEnum;
  */
 public class MsgBizException extends BizException {
 
+  public MsgBizException(MsgBizExceptionEnum exceptionEnum, String msg, Throwable e) {
+    super(exceptionEnum.getCode(), exceptionEnum.getDesc() + msg, e);
+  }
+
+  public MsgBizException(MsgBizExceptionEnum exceptionEnum, Throwable e) {
+    this(exceptionEnum, "", e);
+  }
 
   public MsgBizException(MsgBizExceptionEnum exceptionEnum) {
-    super(exceptionEnum.getCode(), exceptionEnum.getDesc());
+    super(exceptionEnum.getCode(), "");
   }
 
-  public MsgBizException(Throwable e) {
-    super(e);
+  public MsgBizException(MsgBizExceptionEnum exceptionEnum, String msg) {
+    super(exceptionEnum.getCode(), exceptionEnum.getDesc() + msg);
   }
+
 }

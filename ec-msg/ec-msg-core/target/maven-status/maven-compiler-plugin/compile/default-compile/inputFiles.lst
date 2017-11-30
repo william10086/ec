@@ -1,2 +1,10 @@
-/Users/carl.yu/IdeaProjects/ec/ec-msg/ec-msg-core/src/main/java/com/ysz/ec/msg/core/impl/MsgApiImpl.java
+/Users/carl.yu/IdeaProjects/ec/ec-msg/ec-msg-core/src/main/java/com/ysz/ec/msg/core/configuration/KafkaConfiguration.java
+/Users/carl.yu/IdeaProjects/ec/ec-msg/ec-msg-core/src/main/java/com/ysz/ec/msg/core/MsgApplication.java
+/Users/carl.yu/IdeaProjects/ec/ec-msg/ec-msg-core/src/main/java/com/ysz/ec/msg/core/entity/Msg.java
+/Users/carl.yu/IdeaProjects/ec/ec-msg/ec-msg-core/src/main/java/com/ysz/ec/msg/core/service/impl/MsgServiceImpl.java
+/Users/carl.yu/IdeaProjects/ec/ec-msg/ec-msg-core/src/main/java/com/ysz/ec/msg/core/dao/impl/MsgDAOImpl.java
+/Users/carl.yu/IdeaProjects/ec/ec-msg/ec-msg-core/src/main/java/com/ysz/ec/msg/core/dao/MsgDAO.java
+/Users/carl.yu/IdeaProjects/ec/ec-msg/ec-msg-core/src/main/java/com/ysz/ec/msg/core/service/MsgService.java
+/Users/carl.yu/IdeaProjects/ec/ec-msg/ec-msg-core/src/main/java/com/ysz/ec/msg/core/web/MsgApiImpl.java
+/Users/carl.yu/IdeaProjects/ec/ec-msg/ec-msg-core/src/main/java/com/ysz/ec/msg/core/manager/dto/SendResultDTO.java
 /Users/carl.yu/IdeaProjects/ec/ec-msg/ec-msg-core/src/main/java/com/ysz/ec/msg/core/utils/MsgConvertUtils.java
